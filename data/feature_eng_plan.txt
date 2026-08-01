@@ -1,0 +1,32 @@
+BGGId                   Kept in the dataset
+Name                    Kept in the dataset
+Description             Removed (textual feature: not useful for the analysis)
+YearPublished           Filtered (removed games published before 1950)
+GameWeight              Kept in the dataset (NaN values replaced with the median)
+ComWeight               Removed (high correlation with GameWeight)
+MinPlayers              Kept in the dataset (NaN values replaced with the mode)
+MaxPlayers              Kept in the dataset (removed values = 999 and log-transformed due to outliers)
+ComAgeRec               Kept in the dataset (25% of NaN values imputed with the median)
+LanguageEase            Removed
+BestPlayers             Removed
+GoodPlayers             Removed
+NumOwned                Converted into Avg_popularity_log (merged with NumWish and NumWant due to high correlation)
+NumWant                 Converted into Avg_popularity_log (merged with NumWish and NumOwned due to high correlation)
+NumWish                 Converted into Avg_popularity_log (merged with NumWant and NumOwned due to high correlation)
+NumWeightVotes          Removed (very high correlation with Avg_popularity)
+MfgPlaytime             Removed (identical values to ComMaxPlayTime)
+ComMinPlaytime          Kept in the dataset + NaN values imputed with the median
+ComMaxPlaytime          Kept in the dataset + NaN values imputed with the median
+MfgAgeRec               Removed (many NaN values and high correlation with ComAgeRec)
+NumUserRatings          Removed (very high correlation with Avg_popularity)
+NumComments             Removed (almost entirely composed of zeros)
+IsReimplementation      Kept in the dataset
+NumAlternates           Kept in the dataset (log-transformed)
+NumExpansions           Kept in the dataset (log-transformed)
+NumImplementation       Kept in the dataset (log-transformed)
+Family                  Removed
+Kickstarted             Kept in the dataset
+ImagePath               Removed (URL feature: not useful for the analysis)
+Rank Features:          Converted into a 1/rank score for each category + replaced 21926 with score = 0.0
+Cat Features:           Removed (8 features)
+Rating                  Kept in the dataset (converted into values 1, 2, 3)
